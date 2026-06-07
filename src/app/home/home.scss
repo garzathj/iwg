@@ -1,0 +1,19 @@
+@import '../../variables.scss';
+
+main {
+  display: grid;
+  grid-template-columns: $mlm auto $mrm;
+  background-color: $mainBackColor;
+
+  @media (max-width: $mobileWidth) {
+    grid-template-columns: 100%;
+  }
+}
+
+content {
+  grid-column: 2;
+
+  @media (max-width: $mobileWidth) {
+    grid-column: 1;
+  }
+}

@@ -1,0 +1,36 @@
+<main id="main">
+  <section class="title">
+    <div class="icon">
+      <i class="bi bi-fire"></i>
+    </div>
+    <div class="title">
+      <span>Recomendaciones</span>
+    </div>
+  </section>
+  <section class="games">
+    <div *ngFor="let game of topGames" class="gameCard">
+      <div class="console">
+        <img src="/img/logo/ps4logo.png" style="height: 3vh;">
+      </div>
+      <div class="imgcontent">
+        <img class="img" src="/img/{{game.img}}.png">
+      </div>
+      <div class="info">
+        <div class="info-content">
+          <span>
+            Hollow Knight - Descend into Darkness
+          </span>
+        </div>
+        <div class="price">
+          <span class="crossed-out">$550.50</span>
+          <span>$550.50</span>
+        </div>
+        <div class="cart flexcenter">
+          <div class="cart-box flexcenter">
+            <i class="bi bi-cart"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

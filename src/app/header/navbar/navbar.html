@@ -1,0 +1,41 @@
+<main>
+  <content>
+    <section class="logo">
+      <img src="/img/logo/IWG color.png" class="logoimg" [routerLink]="''" />
+    </section>
+    <section class="navbar">
+      <a class="navbar-item" [routerLink]="['/games', 'ps3']" [routerLinkActive]="'navbar-item-active'">
+        <span>PS3</span>
+      </a>
+      <a class="navbar-item" [routerLink]="['/games', 'ps4']" [routerLinkActive]="'navbar-item-active'">
+        <span>PS4</span>
+      </a>
+      <a class="navbar-item" [routerLink]="['/games', 'ps5']" [routerLinkActive]="'navbar-item-active'">
+        <span>PS5</span>
+      </a>
+      <a class="navbar-item" [routerLink]="['/games', 'psvita']" [routerLinkActive]="'navbar-item-active'">
+        <span>PSVITA</span>
+      </a>
+      <a class="navbar-item" [routerLink]="['/games', 'nintendoswitch']" [routerLinkActive]="'navbar-item-active'">
+        <span>NINTENDO SWITCH</span>
+      </a>
+      <a class="navbar-item" [routerLink]="['/games', 'supernintendo']" [routerLinkActive]="'navbar-item-active'">
+        <span>SUPER NINTENDO</span>
+      </a>
+    </section>
+    <section class="user">
+      <div class="user-box flexcenter">
+        <i class="bi bi-person-fill"></i>
+      </div>
+      <div class="cart-box flexcenter" [routerLink]="'cart'" [routerLinkActive]="'cart-active'">
+        <i class="bi bi-cart"></i>
+        <div class="badge">
+          <span>11</span>
+        </div>
+      </div>
+    </section>
+    <section class="mobile-navbar">
+      <i class="bi mobile-navbar-icon" [ngClass]="isMenuOpen ? 'bi-x' : 'bi-list'" (click)="toggleMenu()"></i>
+    </section>
+  </content>
+</main>

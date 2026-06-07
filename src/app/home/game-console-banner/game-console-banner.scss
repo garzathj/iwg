@@ -1,0 +1,52 @@
+@import '../../../variables.scss';
+
+#main {
+  display: grid;
+  grid-template-columns: $mlm auto $mrm;
+}
+
+#section {
+  grid-column: 2;
+  height: 26vh;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1vw;
+  margin-top: 4vh;
+
+  @media (max-width: $mobileWidth) {
+    justify-content: flex-start;
+    column-gap: 6vw;
+  }
+}
+
+.gameConsole {
+  height: 18vh;
+  width: 12vw;
+  border-radius: 1vh;
+  background-color: white;
+  cursor: pointer;
+
+  @media (max-width: $mobileWidth) {
+    width: 44vw;
+  }
+}
+
+.gameConsole:hover {
+  transition: all .5s ease-in-out;
+  transform: scale(1.1);
+
+  @media (max-width: $mobileWidth) {
+    transition: none;
+    transform: none;
+  }
+}
+
+.imgPs3 {
+  height: 7vh;
+
+  @media (max-width: $mobileWidth) {
+    height: 6vh;
+  }
+}

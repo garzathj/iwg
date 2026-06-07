@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  width: 100vw;
+  font-family: Tahoma;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  background-color: #e6e6e6;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bold {
+    font-weight: bold;
+}

@@ -1,0 +1,143 @@
+@import '../../../variables.scss';
+$nintendoColor: #4a53ff;
+
+#main {
+  height: 66vh;
+  display: grid;
+  grid-template-rows: 8vh auto;
+  font-family: 'CabinetGrotesk-Medium';
+  background-color: $mainBackColor;
+  margin-top: 4vh;
+
+  @media (max-width: $mobileWidth) {
+
+  }
+}
+
+.title {
+  display: grid;
+  grid-template-columns: 3.4vw auto;
+  font-family: 'CabinetGrotesk-Medium';
+  color: white;
+
+  @media (max-width: $mobileWidth) {
+    grid-template-columns: 13% auto;
+  }
+
+  & .icon {
+    display: flex;
+    align-items: center;
+    font-size: 4.9vh;
+
+    @media (max-width: $mobileWidth) {
+      font-size: 4.3vh;
+    }
+  }
+
+  & .title {
+    display: flex;
+    align-items: center;
+    font-size: 4.6vh;
+
+    @media (max-width: $mobileWidth) {
+      font-size: 3.6vh;
+    }
+  }
+}
+
+.games {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 1.2vw;
+
+  @media (max-width: $mobileWidth) {
+    flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+    width: max-content; /* Allow content to expand beyond viewport width */
+    overflow-x: scroll; /* Enable horizontal scrolling when content overflows */
+    -webkit-overflow-scrolling: touch; /* Enhance scrolling experience on iOS */
+  }
+}
+
+.gameCard {
+  height: 52vh;
+  width: 16.2vw;
+  display: grid;
+  grid-template-rows: 4.6vh 34vh auto;
+  background-color: #191D2B;
+  border-radius: 1.6vh;
+  cursor: pointer;
+  overflow: hidden;
+
+  @media (max-width: $mobileWidth) {
+    height: 52vh;
+    width: 60vw;
+  }
+
+  & .console {
+    background-color: $nintendoColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .imgcontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .img {
+    height: 92%;
+    width: 60%;
+  }
+
+  & .info {
+    display: grid;
+    grid-template-rows: 52% 48%;
+    grid-template-columns: 56% 44%;
+    color: white;
+    font-size: 2vh;
+  }
+}
+
+.info-content {
+  grid-column: 1 / 3;
+  display: flex;
+  align-items: center;
+  padding-left: 0.8vw;
+  font-size: 2.2vh;
+  line-height: 1;
+}
+
+.price {
+  grid-column: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2.2vh;
+  padding-left: 0.8vw;
+  line-height: 1.2;
+
+  & .crossed-out {
+    font-size: 1.8vh;
+    text-decoration: line-through;
+    color: gray;
+  }
+}
+
+.cart {
+  grid-column: 2;
+}
+
+.cart-box {
+  height: 6vh;
+  width: 3.8vw;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1vh;
+  cursor: pointer;
+  background-color: $logoGreen;
+  color: black;
+  font-size: 3.4vh;
+  font-weight: bold;
+}

@@ -1,0 +1,148 @@
+@import '../../../variables.scss';
+
+main {
+  min-height: $minHeight;
+  display: grid;
+  grid-template-columns: $mlm auto $mrm;
+  grid-template-rows: 10vh auto;
+  font-family: 'CabinetGrotesk-Medium';
+  background-color: $mainBackColor;
+}
+
+.filter {
+  background-color: red;
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 76% 24%;
+
+  & .leftsec {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 1vw;
+  }
+
+  & .rightsec {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 1vw;
+
+    & .applyBtn {
+      height: 7vh;
+      width: 8vw;
+      background-color: #997a00;
+      color: white;
+      border-radius: 0.5vh;
+      font-size: 1.8vh;
+      cursor: pointer;
+    }
+
+    & .applyBtn:hover {
+      opacity: 0.92;
+    }
+
+    & .clearBtn {
+      height: 7vh;
+      width: 4vw;
+      background-color: white;
+      color: #997a00;
+      border-radius: 0.5vh;
+      border: 1px solid #997a00;
+      font-size: 1.8vh;
+      cursor: pointer;
+    }
+  }
+}
+
+content {
+  grid-column: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 2vw;
+  row-gap: 3vh;
+  flex-wrap: wrap;
+}
+
+.gamecard {
+  background-color: #191D2B;
+  height: 48vh;
+  width: 15vw;
+  display: grid;
+  grid-template-rows: 34vh auto;
+  border-radius: 1vh;
+  overflow: hidden;
+  font-size: 2.1vh;
+  color: white;
+
+  & .header {
+    display: flex;
+    align-items: center;
+    background-color: $logoGreen;
+
+    img {
+      height: 2.2vh;
+    }
+  }
+
+  img {
+    height: 30vh;
+    cursor: pointer;
+  }
+
+  img:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(1.1);
+
+    @media (max-width: $mobileWidth) {
+      transition: none;
+      transform: none;
+    }
+  }
+
+  & .info {
+    display: grid;
+    grid-template-rows: 50% 50%;
+
+    .name {
+      line-height: 1.1;
+      padding-left: 0.6vw;
+    }
+
+    .pricecart {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      line-height: 1.4;
+
+      .price {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0.6vw;
+      }
+
+      .crossed-out {
+        font-size: 1.8vh;
+        text-decoration: line-through;
+        color: gray;
+      }
+    }
+  }
+
+  & .cart-box {
+    height: 5.8vh;
+    width: 4vw;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1vh;
+    cursor: pointer;
+    color: black;
+    font-size: 3.2vh;
+    font-weight: bold;
+    color: #e6e6e6;
+  }
+
+  .cart-box:hover {
+    color: white;
+    border-color: white;
+  }
+}

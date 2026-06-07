@@ -1,0 +1,32 @@
+<main>
+  <div class="filter">
+    <div class="leftsec">
+      <mat-icon style="font-size: 4vh;">filter_list</mat-icon>
+    </div>
+    <div class="rightsec">
+      <div role="button" class="clearBtn flexcenter">X</div>
+      <div role="button" class="applyBtn flexcenter">Aplicar Filtros</div>
+    </div>
+  </div>
+  <content>
+    <div *ngFor="let game of games" class="gamecard">
+      <div class="flexcenter">
+        <img src="{{asr}}{{game.img}}" />
+      </div>
+      <div class="info">
+        <div class="name">
+          <span>Best Of PlayStation Network Best of play</span>
+        </div>
+        <div class="pricecart">
+          <div class="price">
+            <span class="crossed-out">$120.00</span>
+            <span>$520.00</span>
+          </div>
+          <div class="cart-box">
+            <i class="bi bi-cart-plus-fill"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </content> 
+</main>

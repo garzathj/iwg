@@ -1,0 +1,31 @@
+@import '../../variables.scss';
+
+main {
+  height: 60vh;
+  margin-top: 4vh;
+  background-image: url('/img/iwgfooter.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: 'CabinetGrotesk-Medium';
+}
+
+content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.leftcontent {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  row-gap: 3vh;
+  padding-left: 6vw;
+  font-size: 2.2vh;
+}
+
+img {
+    height: 22vh;
+}
